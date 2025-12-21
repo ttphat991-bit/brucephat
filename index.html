@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BrucePhat</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --bg: #f1f5f9;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      background: linear-gradient(135deg, #2563eb, #1e40af);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    header p {
+      margin-top: 10px;
+      opacity: 0.9;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 35px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.25rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 12px;
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌐 Website của BrucePhat</h1>
+    <p>Tổng hợp các dự án web mình đã thực hiện</p>
+  </header>
+
+  <main>
+    <section class="grid">
+      <div class="card">
+        <h3>📘 Tool Dịch Phụ Đề Cổ Trang và Tool sửa phụ đề</h3>
+        <p>Dịch phụ đề ngôn ngữ tiếng Trung và Sửa phụ đề nếu dịch sai</p>
+        <a href="https://phatsub.vercel.app/" target="_blank">Xem website →</a>
+      </div>
+
+      <div class="card">
+        <h3>📘 Tool tạo SHA-256</h3>
+        <p>Tạo mã hash</p>
+        <a href="https://mahoa-six.vercel.app/" target="_blank">Xem website →</a>
+      </div>
+
+      <div class="card">
+        <h3>🖼️ So sánh lãi suất Ngân hàng</h3>
+        <p>So sánh lãi suất và tính lãi gửi tiết kiệm</p>
+        <a href="https://tinhlai.vercel.app/" target="_blank">Xem website →</a>
+      </div>
+	  
+	  <div class="card">
+        <h3>🖼️ Hiển thị mệnh giá tiền</h3>
+        <p>Hiển thị mệnh giá tiền và đếm số tờ tiền theo từng mệnh giá</p>
+        <a href="https://menhgiatien.vercel.app/" target="_blank">Xem website →</a>
+      </div>
+
+      <!-- Copy thêm card nếu cần -->
+    </section>
+  </main>
+
+  <footer>
+    © 2025 · Made by BrucePhat · HTML & CSS
+  </footer>
+
+</body>
+</html>
