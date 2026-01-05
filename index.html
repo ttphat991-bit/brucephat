@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BrucePhat</title>
+  <link rel="icon" href="favicon.ico">
+  <meta name="description" content="Portfolio dự án web của BrucePhat">
+   <meta name="author" content="BrucePhat">
   <style>
     :root {
       --primary: #2563eb;
@@ -89,6 +92,40 @@
       color: var(--muted);
       font-size: 0.9rem;
     }
+	@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: fadeUp 0.5s ease forwards;
+}
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.tool { background: #dbeafe; color: #1e40af; }
+.game { background: #dcfce7; color: #166534; }
+.card {
+  cursor: pointer;
+}
+#viewCounter {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+
   </style>
 </head>
 <body>
@@ -100,44 +137,56 @@
 
   <main>
     <section class="grid">
-      <div class="card">
+	
+      <div class="card" onclick="window.open('https://phatsub.vercel.app/', '_blank')">
+	  <span class="badge tool">Tool</span>
         <h3>📘 Tool Dịch Phụ Đề Cổ Trang và Tool sửa phụ đề</h3>
         <p>Dịch phụ đề ngôn ngữ tiếng Trung và Sửa phụ đề nếu dịch sai</p>
         <a href="https://phatsub.vercel.app/" target="_blank">Xem website →</a>
+		
       </div>
-	  <div class="card">
+	  
+	  <div class="card" onclick="window.open('https://viettonhat.vercel.app/', '_blank')">
+	  <span class="badge tool">Tool</span>
 		        <h3>📘 Chuyển đổi tên tiếng VIỆT sang tiếng NHẬT bảng Katakana</h3>
 		        <p>Nhập tên tiếng Việt bấm nút Dịch để dịch sang tiếng Nhật</p>
 		        <a href="https://viettonhat.vercel.app/" target="_blank">Xem website →</a>
 	   </div>
-      <div class="card">
+	   
+      <div class="card" onclick="window.open('https://mahoa-six.vercel.app/', '_blank')">
+	  <span class="badge tool">Tool</span>
         <h3>📘 Tool tạo SHA-256</h3>
         <p>Tạo mã hash</p>
         <a href="https://mahoa-six.vercel.app/" target="_blank">Xem website →</a>
       </div>
 
-      <div class="card">
+      <div class="card" onclick="window.open('https://tinhlai.vercel.app/', '_blank')">
+	  <span class="badge tool">Tool</span>
         <h3>🖼️ So sánh lãi suất Ngân hàng</h3>
         <p>So sánh lãi suất và tính lãi gửi tiết kiệm</p>
         <a href="https://tinhlai.vercel.app/" target="_blank">Xem website →</a>
       </div>
 	  
-	  <div class="card">
+	  <div class="card" onclick="window.open('https://menhgiatien.vercel.app/', '_blank')">
+	  <span class="badge tool">Tool</span>
         <h3>🖼️ Hiển thị mệnh giá tiền</h3>
         <p>Hiển thị mệnh giá tiền và đếm số tờ tiền theo từng mệnh giá</p>
         <a href="https://menhgiatien.vercel.app/" target="_blank">Xem website →</a>
       </div>
-	  <div class="card">
+	  <div class="card" onclick="window.open('https://vongquaymayman-beta.vercel.app/', '_blank')">
+	    <span class="badge game">Game</span>
         <h3>🖼️ Trò chơi Vòng Quay May Mắn</h3>
         <p>Thay đổi cách chơi được, chỉnh được tỉ lệ, lịch sử quay, thống kê lượt quay</p>
         <a href="https://vongquaymayman-beta.vercel.app/" target="_blank">Xem website →</a>
       </div>
-	  <div class="card">
+	  <div class="card" onclick="window.open('https://songaunhien.vercel.app/', '_blank')">
+	        <span class="badge game">Game</span>
 	        <h3>🖼️ Tạo số ngẫu nhiên</h3>
 	        <p>Nhập vào ô số nhỏ nhất và ô số lớn nhất, bấm nút tạo ngẫu nhiên sẽ tạo số bất kỳ, giới hạn bởi khung nhập số nhỏ nhất và số lớn nhất</p>
 	        <a href="https://songaunhien.vercel.app/" target="_blank">Xem website →</a>
 	  </div>
-	  <div class="card">
+	  <div class="card" onclick="window.open('https://baucuaca.vercel.app/', '_blank')">
+	    <span class="badge game">Game</span>
         <h3>🖼️ Trò chơi Bầu cua cá cọp</h3>
         <p>Bấm nút Lắc để bắt đầu chơi, chỉnh được tỉ lệ, thống kê lượt lắc</p>
         <a href="https://baucuaca.vercel.app/" target="_blank">Xem website →</a>
@@ -150,11 +199,32 @@
   </main>
 
   <footer>
-    © 2025 · Made by BrucePhat
-  </footer>
+  © 2025 · Made by BrucePhat <br>
+  <a href="https://www.facebook.com/brucephat/">Facebook</a>
+  <div id="viewCounter" style="margin-top:10px;">
+	  👁️ Lượt truy cập: <strong>...</strong>
+  </div>
+
+</footer>
+
 
 </body>
+<script>
+  const namespace = "brucephat";
+  const key = "portfolio-views";
+
+  fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+    .then(res => res.json())
+    .then(data => {
+      document.querySelector("#viewCounter strong").innerText = data.value;
+    })
+    .catch(() => {
+      document.querySelector("#viewCounter strong").innerText = "N/A";
+    });
+</script>
+
 </html>
+
 
 
 
